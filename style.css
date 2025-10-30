@@ -124,7 +124,7 @@ nav .container {
 
 /* Mobile Menu */
 .mobile-menu {
-    display: none;
+    display: block;
     position: fixed;
     top: 70px;
     right: -100%;
@@ -135,6 +135,13 @@ nav .container {
     transition: right 0.3s ease;
     z-index: 1000;
     height: calc(100vh - 70px);
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        visibility: visible;
+    }
 }
 
 .mobile-menu.active {
@@ -562,15 +569,11 @@ footer {
     }
 
     .nav-links {
-        display: none;
+        display: none !important;
     }
 
     .hamburger {
-        display: flex;
-    }
-
-    .mobile-menu {
-        display: block;
+        display: flex !important;
     }
 
     .feature-grid, .screenshot-grid {
