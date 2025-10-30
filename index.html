@@ -13,21 +13,33 @@
     <header>
         <nav>
             <div class="container">
-                <div class="logo">RideByHeart</div>
+                <div class="logo">
+                    <img src="images/app-icon.png" alt="RideByHeart" class="logo-icon">
+                    <span>RideByHeart</span>
+                </div>
                 <div class="nav-links">
                     <a href="#features">Features</a>
                     <a href="#compatibility">Compatibility</a>
                     <a href="#download">Download</a>
                 </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#features">Features</a>
+            <a href="#compatibility">Compatibility</a>
+            <a href="#download">Download</a>
+        </div>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <img src="images/app-icon.png" alt="RideByHeart App Icon" class="app-icon">
                 <h1>RideByHeart</h1>
                 <p class="tagline">Train by zones, guided by feel.</p>
                 <p class="subtitle">Indoor cycling training powered by your heart rate and power zones.<br>
@@ -187,5 +199,31 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

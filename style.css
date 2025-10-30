@@ -48,12 +48,25 @@ nav .container {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.logo span {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links {
@@ -71,19 +84,77 @@ nav .container {
     color: var(--light-text);
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-text);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    background-color: var(--darker-bg);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    height: calc(100vh - 70px);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--gray-text);
+    text-decoration: none;
+    transition: all 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-menu a:hover {
+    color: var(--light-text);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 2.5rem;
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 6rem 0 4rem;
     background: linear-gradient(180deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-}
-
-.app-icon {
-    width: 150px;
-    height: 150px;
-    border-radius: 28px;
-    margin-bottom: 2rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .hero h1 {
@@ -485,7 +556,15 @@ footer {
     }
 
     .nav-links {
-        gap: 1rem;
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
     }
 
     .feature-grid, .screenshot-grid {

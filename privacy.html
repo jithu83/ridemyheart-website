@@ -12,13 +12,25 @@
     <header>
         <nav>
             <div class="container">
-                <div class="logo">RideByHeart</div>
+                <div class="logo">
+                    <img src="images/app-icon.png" alt="RideByHeart" class="logo-icon">
+                    <span>RideByHeart</span>
+                </div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="terms.html">Terms</a>
                 </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="terms.html">Terms</a>
+        </div>
     </header>
 
     <main>
@@ -130,5 +142,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
