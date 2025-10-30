@@ -476,6 +476,14 @@ footer {
     color: var(--gray-text);
 }
 
+.build-info {
+    font-size: 0.7rem;
+    color: var(--gray-text);
+    opacity: 0.4;
+    font-family: monospace;
+    margin-top: 0.5rem;
+}
+
 /* Legal Pages */
 .legal-content {
     padding: 4rem 0;

@@ -196,6 +196,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 RideByHeart. All rights reserved.</p>
+                <p class="build-info">Build: <span id="commit-hash">...</span></p>
             </div>
         </div>
     </footer>
@@ -224,6 +225,16 @@
                 hamburger.classList.remove('active');
             }
         });
+
+        // Cloudflare Pages build info
+        fetch('https://' + window.location.host + '/cdn-cgi/pages/commit-sha')
+            .then(r => r.text())
+            .then(sha => {
+                document.getElementById('commit-hash').textContent = sha.substring(0, 7);
+            })
+            .catch(() => {
+                document.getElementById('commit-hash').textContent = 'local';
+            });
     </script>
 </body>
 </html>
