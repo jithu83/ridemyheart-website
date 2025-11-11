@@ -564,6 +564,14 @@ footer {
     color: var(--gray-text);
 }
 
+.location-info {
+    font-size: 0.75rem;
+    color: var(--gray-text);
+    opacity: 0.5;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
 .build-info {
     font-size: 0.7rem;
     color: var(--gray-text);
