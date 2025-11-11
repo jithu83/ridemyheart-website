@@ -413,6 +413,65 @@ nav .container {
     font-size: 1.5rem;
 }
 
+/* Story Section */
+.story {
+    padding: 5rem 0;
+    background-color: var(--dark-bg);
+}
+
+.story h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.story-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.story-text p {
+    color: var(--gray-text);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.story-text p:first-of-type {
+    color: var(--light-text);
+    font-size: 1.15rem;
+}
+
+.story-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.creator-photo {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.creator-photo:hover {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    font-style: italic;
+    text-align: center;
+}
+
 /* Download Section */
 .download {
     padding: 5rem 0;
@@ -616,6 +675,15 @@ footer {
 
     .compatibility-content {
         grid-template-columns: 1fr;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .story-text p {
+        text-align: left;
     }
 }
 
