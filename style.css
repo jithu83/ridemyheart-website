@@ -541,15 +541,20 @@ nav .container {
 }
 
 .beta-option {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--gray-text);
 }
 
-.beta-text {
-    font-size: 0.95rem;
+.beta-link {
     color: var(--gray-text);
-    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.beta-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .btn-small {
@@ -740,5 +745,230 @@ footer {
 
     .btn {
         width: 100%;
+    }
+}
+
+/* Story Page Styles */
+.story-page {
+    padding: 5rem 0;
+    background-color: var(--dark-bg);
+}
+
+.story-page h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), #ff8c42);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.story-intro {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.story-intro .lead {
+    font-size: 1.4rem;
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.short-version-link {
+    font-size: 1rem;
+    color: var(--gray-text);
+    margin-top: 1rem;
+}
+
+.short-version-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.short-version-link a:hover {
+    color: #ff8c42;
+    text-decoration: underline;
+}
+
+.story-hero-image {
+    max-width: 1000px;
+    margin: 3rem auto 4rem;
+}
+
+.collage-image {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.collage-image:hover {
+    transform: scale(1.02);
+}
+
+.story-detailed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-detailed h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.story-detailed h2:first-of-type {
+    margin-top: 0;
+}
+
+.story-detailed p {
+    color: var(--gray-text);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.story-detailed a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.story-detailed a:hover {
+    color: #ff8c42;
+    text-decoration: underline;
+}
+
+.strava-widget-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.strava-widget-section h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.strava-widget-section p {
+    color: var(--gray-text);
+    margin-bottom: 1.5rem;
+}
+
+.strava-widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strava-widget-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.connect-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+}
+
+.connect-section h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.connect-links {
+    list-style: none;
+    padding: 0;
+}
+
+.connect-links li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.connect-links li:last-child {
+    border-bottom: none;
+}
+
+.connect-links strong {
+    color: var(--light-text);
+    display: inline-block;
+    min-width: 120px;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, rgba(255, 105, 0, 0.1), rgba(255, 140, 66, 0.1));
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.cta-box p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-box .btn {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.cta-box .btn:hover {
+    background-color: #ff8c42;
+    color: #ffffff;
+}
+
+.story-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.story-link:hover {
+    color: #ff8c42;
+}
+
+@media (max-width: 768px) {
+    .story-page h1 {
+        font-size: 2.2rem;
+    }
+
+    .story-intro .lead {
+        font-size: 1.2rem;
+    }
+
+    .story-detailed h2 {
+        font-size: 1.6rem;
+    }
+
+    .story-detailed p {
+        font-size: 1rem;
+    }
+
+    .connect-links strong {
+        display: block;
+        margin-bottom: 0.25rem;
     }
 }

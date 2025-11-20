@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About the creator of RideByHeart - A systems engineer's journey from Linux kernel development to building cycling training software.">
+    <title>Story - RideByHeart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/app-icon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/app-icon-40.png" alt="RideByHeart" class="logo-icon">
+                    <span>RideByHeart</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#compatibility">Compatibility</a>
+                    <a href="story.html">Story</a>
+                    <a href="index.html#download">Download</a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#compatibility">Compatibility</a>
+            <a href="story.html">Story</a>
+            <a href="index.html#download">Download</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="story-page">
+            <div class="container">
+                <h1>The Story Behind RideByHeart</h1>
+
+                <div class="story-intro">
+                    <p class="lead">Built by a systems engineer who loves the intersection of hardware, software, and cycling.</p>
+                    <p class="short-version-link">Want the short version? <a href="index.html#story">Read the brief story</a></p>
+                </div>
+
+                <div class="story-hero-image">
+                    <img src="images/story_collage.jpg" alt="Jithu's cycling journey - from Utah to Bay Area climbs" class="collage-image">
+                </div>
+
+                <div class="story-detailed">
+                    <h2>From Kernel Hacking to Bike Riding</h2>
+
+                    <p>I'm Jithu Joseph, and for most of my career, I've been working deep in the stack—Linux kernel development, device drivers, embedded systems, and low-level software where hardware meets code. I spent nearly a decade at Intel working on the Core Linux Kernel Team, contributing many patches to the mainline kernel, maintaining x86 platform drivers, and developing features like <a href="https://www.intel.com/InFieldScan" target="_blank" rel="noopener">In-Field Scan (IFS)</a> for detecting faulty CPU components in live systems.</p>
+
+                    <p>My work involved CPU caches, real-time systems, USB drivers, network protocols, and occasionally hobby robotics projects. There's something deeply satisfying about developing low level software.</p>
+
+                    <h2>How I Became a Cyclist</h2>
+
+                    <p>I came to the United States 12 years ago for graduate school at the University of Utah in Salt Lake City. My apartment in University Village sat at the base of Emigration Canyon, a popular local climb. Every weekend morning, I'd wake up and watch cyclists streaming past my window, heading up the canyon. I got intrigued, bought a bike, took it up that hill, and never looked back.</p>
+
+                    <p>After finishing my MS in Computer Science, I moved to the Bay Area about 10 years ago, initially settling in Santa Clara. I explored classic Bay Area climbs: Mount Hamilton, Old La Honda, Tunitas Creek, Kings Mountain, Pescadero Creek, Calaveras, Mount Diablo. The hills became my weekend routine.</p>
+
+                    <p>About three years ago, I moved a bit inland from the proper Bay Area to a small town called Mountain House, near Livermore. Ever since, Mount Diablo has been my local stomping ground. On most weekends, you'll find me riding up that mountain. Sometimes I take my elder son (who is now 6 Yo) on easier routes. Cycling has become more than fitness—it's family time, exploration, and a mental reset from the week's work.</p>
+
+                    <h2>Why RideByHeart Exists</h2>
+
+                    <p>I wanted to combine a couple of my passions: cycling, fitness, and that hardware-software interaction I've always loved. Building a simple indoor trainer controller app without a 20$ monthly subscription seemed like the logical thing to do</p>
+
+                    <p>RideByHeart implements the FTMS (Fitness Machine Service) Bluetooth protocol to control any compatible smart trainer—Wahoo, Tacx, Elite, Saris etc. In addition to structured workouts similar to what you would find in regular cycling Apps like zwift, TR ... RideByHeart provides certain niche features like ability to easily import custom workouts(.zwo format), heart rate zone training with automatic resistance adjustment, TCX export for Strava etc. No subscriptions, no accounts, no data collection, no features you won't use.</p>
+
+                    <p>I've canceled my Zwift subscription and now use RideByHeart for all my indoor sessions. Is it perfect? No. This is version 1.7, and there's a lot I want to improve. But it works, it's focused, and it respects your time and wallet. I'm releasing it now to get feedback from real riders and iterate quickly.</p>
+
+                    <h2>What's Next</h2>
+
+                    <p>This is an exploration phase for me—combining technical work with something I'm personally passionate about. I'm actively developing RideByHeart, responding to user feedback, and adding features that matter for focused training. Direct Strava uploads, expanded workout libraries, enhanced visualizations—these are coming.</p>
+
+                    <p>I'm based in Mountain House, California, and you can often find me riding up Mount Diablo on a weekend or on the trainer in my garage. If you have feedback, feature requests, or just want to share your experience with the app, I'd love to hear from you.</p>
+
+                    <h2>Acknowledgments</h2>
+
+                    <p>Special thanks to my friend <a href="https://people.cs.vt.edu/vbimal/#" target="_blank" rel="noopener">Bimal Viswanath</a> for providing continuous feedback and constructive suggestions. His insights as both a cyclist and fellow technologist have been invaluable in identifying and fixing certain app issues.</p>
+
+                    <div class="strava-widget-section">
+                        <h2>Recent Rides</h2>
+                        <p>Follow along with my latest cycling adventures:</p>
+                        <div class="strava-widget-container">
+                            <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/5098577/latest-rides/1c423dd846084d8f23c55a6a8b8d8f02e2379928'></iframe>
+                        </div>
+                    </div>
+
+                    <div class="connect-section">
+                        <h2>Connect</h2>
+                        <ul class="connect-links">
+                            <li><strong>Email:</strong> <a href="mailto:support@ridebyheart.app">support@ridebyheart.app</a></li>
+                            <li><strong>X (Twitter):</strong> <a href="https://x.com/jithu83" target="_blank" rel="noopener">@jithu83</a></li>
+                            <li><strong>Strava:</strong> <a href="https://www.strava.com/athletes/5098577" target="_blank" rel="noopener">Follow my rides</a></li>
+                            <li><strong>GitHub:</strong> <a href="https://github.com/jithu83" target="_blank" rel="noopener">@jithu83</a></li>
+                            <li><strong>Blog:</strong> <a href="https://medium.com/@jithu83" target="_blank" rel="noopener">Technical writing and projects</a></li>
+                            <li><strong>Linux Kernel:</strong> <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=jithu.joseph@intel.com" target="_blank" rel="noopener">My contributions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Ready to Train?</h3>
+                        <p>Download RideByHeart and start your first workout today.</p>
+                        <a href="index.html#download" class="btn btn-primary">Get the App</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RideByHeart</h4>
+                    <p>Training without the subscription</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Questions or feedback?<br>
+                    <a href="mailto:support@ridebyheart.app">support@ridebyheart.app</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p><a href="privacy.html">Privacy Policy</a><br>
+                    <a href="terms.html">Terms of Service</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RideByHeart. All rights reserved.</p>
+                <p class="location-info">Made in Mountain House, California</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
